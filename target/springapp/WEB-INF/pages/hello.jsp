@@ -8,7 +8,7 @@
 <title>Hello Text</title>
 </head>
 <body>
-Welcome Text : <h3>${htxt}</h3>
+Job object data here : <h3>${job}</h3>
 
 </body>
 </html>

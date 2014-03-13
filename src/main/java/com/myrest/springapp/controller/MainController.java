@@ -19,7 +19,8 @@ public class MainController {
 	@RequestMapping("/job/get/{id}")
 	public ModelAndView getJobDetails(){
 		mv = new ModelAndView("hello");
-		mv.addObject("job", );
+		mv.addObject("job", "Pass the Job Object here.");
 		
 		return mv; 
+	}
 }
