@@ -10,6 +10,7 @@
 
 	<properties>
 		<spring.version>3.2.5.RELEASE</spring.version>
+		<jdk.version>1.7</jdk.version>
 	</properties>
 
 	<dependencies>
@@ -54,7 +55,18 @@
 			<version>${spring.version}</version>
 		</dependency>
 	</dependencies>
-	<build>
-		<finalName>springapp</finalName>
-	</build>
+	 <build>
+    <finalName>springapp</finalName>
+    <plugins>
+       <plugin>
+           <groupId>org.apache.maven.plugins</groupId>
+           <artifactId>maven-compiler-plugin</artifactId>
+           <version>3.1</version>
+           <configuration>
+           <source>${jdk.version}</source>
+          <target>${jdk.version}</target>
+           </configuration>
+       </plugin>
+    </plugins>
+  </build>
 </project>

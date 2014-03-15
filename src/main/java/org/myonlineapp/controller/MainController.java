@@ -1,4 +1,4 @@
-package com.myrest.springapp.controller;
+package org.myonlineapp.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,6 +1,6 @@
-package com.myrest.springapp.daoImpl;
+package org.myonlineapp.daoImpl;
 
-import com.myrest.springapp.model.Job;
+import org.myonlineapp.model.Job;
 
 public class JobDaoImpl {
 	public Job getJobById(String jobid){

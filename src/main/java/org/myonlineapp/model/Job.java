@@ -1,4 +1,4 @@
-package com.myrest.springapp.model;
+package org.myonlineapp.model;
 
 import org.springframework.stereotype.Repository;
 
