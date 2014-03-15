@@ -54,19 +54,37 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
+		<!-- <dependency> <groupId>org.springframework</groupId> <artifactId>spring-hibernate</artifactId> 
+			<version>1.2.5</version> </dependency> -->
+		<!-- hibernate 3 -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>4.1.2</version>
+		</dependency>
+
+
+		<!-- MySQL database driver -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.9</version>
+		</dependency>
+
 	</dependencies>
-	 <build>
-    <finalName>springapp</finalName>
-    <plugins>
-       <plugin>
-           <groupId>org.apache.maven.plugins</groupId>
-           <artifactId>maven-compiler-plugin</artifactId>
-           <version>3.1</version>
-           <configuration>
-           <source>${jdk.version}</source>
-          <target>${jdk.version}</target>
-           </configuration>
-       </plugin>
-    </plugins>
-  </build>
+	<build>
+		<finalName>springapp</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<fork>true</fork>
+					<source>${jdk.version}</source>
+					<target>${jdk.version}</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
