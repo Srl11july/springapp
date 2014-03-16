@@ -3,6 +3,7 @@ package org.myonlineapp.controller;
 import org.myonlineapp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -15,9 +16,10 @@ public class UserController {
 	ModelAndView mv;
 	
 	@RequestMapping("/get/{userid}")
-	public ModelAndView helloText(){
+	@Transactional
+	public ModelAndView getUserDetails(){
 		mv = new ModelAndView("userdetail");
-		mv.addObject("user", userService.getUserById("100"));
+		mv.addObject("user", userService.getUserById(100));
 		return mv;
 	}
 }
