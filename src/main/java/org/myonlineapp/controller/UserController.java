@@ -19,7 +19,7 @@ public class UserController {
 	@Transactional
 	public ModelAndView getUserDetails(){
 		mv = new ModelAndView("userdetail");
-		mv.addObject("user", userService.getUserById(100));
+		mv.addObject("user", userService.getUserById(100L));
 		return mv;
 	}
 }

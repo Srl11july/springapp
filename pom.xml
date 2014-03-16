@@ -9,7 +9,7 @@
 	<url>http://maven.apache.org</url>
 
 	<properties>
-		<spring.version>3.2.5.RELEASE</spring.version>
+		<spring.version>3.2.0.RELEASE</spring.version>
 		<jdk.version>1.7</jdk.version>
 	</properties>
 
@@ -62,6 +62,11 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-orm</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
 		
