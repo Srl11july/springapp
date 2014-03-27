@@ -1,5 +1,5 @@
 package org.myonlineapp.common.exception;
 
-public class CustomException {
+public class CustomException extends Exception{
 
 }
