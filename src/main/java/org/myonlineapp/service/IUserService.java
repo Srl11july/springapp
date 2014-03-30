@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 import org.myonlineapp.model.User;
 
-public interface UserService {
+public interface IUserService {
 	public void addUser(User user);
 	public void deleteUser(User user);
 	public void updateUser(User user);

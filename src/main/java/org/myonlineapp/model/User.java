@@ -1,35 +1,27 @@
 package org.myonlineapp.model;
 
-import java.io.Serializable;
-
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="User")
-public class User implements Serializable {
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private long id;
-	private String userid;
+public class User extends BaseEntity{
+	
 	private String username;
+	private String fullname;
 	private String useremail;
 	private String userrole;
-	
-	public String getUserid() {
-		return userid;
-	}
-	public void setUserid(String userid) {
-		this.userid = userid;
-	}
 	public String getUsername() {
 		return username;
 	}
 	public void setUsername(String username) {
 		this.username = username;
+	}
+	public String getFullname() {
+		return fullname;
+	}
+	public void setFullname(String fullname) {
+		this.fullname = fullname;
 	}
 	public String getUseremail() {
 		return useremail;
@@ -43,5 +35,7 @@ public class User implements Serializable {
 	public void setUserrole(String userrole) {
 		this.userrole = userrole;
 	}
+	
+
 	
 }

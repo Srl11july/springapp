@@ -2,18 +2,17 @@ package org.myonlineapp.serviceImpl;
 
 import java.io.Serializable;
 
-import org.myonlineapp.dao.UserDao;
+import org.myonlineapp.dao.IUserDao;
 import org.myonlineapp.model.User;
-import org.myonlineapp.service.UserService;
+import org.myonlineapp.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 @Service
-public class UserServiceImpl implements UserService {
+public class UserServiceImpl implements IUserService {
 
 	@Autowired
-	private UserDao userDao;
+	private IUserDao userDao;
 
 	@Override
 	public void addUser(User user) {

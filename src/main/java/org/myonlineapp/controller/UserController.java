@@ -1,6 +1,6 @@
 package org.myonlineapp.controller;
 
-import org.myonlineapp.service.UserService;
+import org.myonlineapp.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
@@ -12,7 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class UserController {
 
 	@Autowired
-	private UserService userService;
+	private IUserService userService;
 	ModelAndView mv;
 	
 	@RequestMapping("/get/{userid}")
