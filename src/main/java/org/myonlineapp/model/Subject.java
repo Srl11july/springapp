@@ -1,14 +1,19 @@
 package org.myonlineapp.model;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "Subject")
 public class Subject extends BaseEntity {
+	
 	private String subjectname;
 	private String subjectdescription;
-	private SubjectCategory subjectCategory;
+	
+	@ManyToOne
+	private SubjectCategory mySubjectCategory;
+	
 	public String getSubjectname() {
 		return subjectname;
 	}
@@ -22,9 +27,9 @@ public class Subject extends BaseEntity {
 		this.subjectdescription = subjectdescription;
 	}
 	public SubjectCategory getSubjectCategory() {
-		return subjectCategory;
+		return mySubjectCategory;
 	}
 	public void setSubjectCategory(SubjectCategory subjectCategory) {
-		this.subjectCategory = subjectCategory;
+		this.mySubjectCategory = subjectCategory;
 	}
 }

@@ -3,6 +3,11 @@ package org.myonlineapp.model;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -12,8 +17,19 @@ public class Question extends BaseEntity{
 	private String questiontype;
 	private String questioncategory;
 	private String questiontext;
+	
+	@ManyToMany(mappedBy="listQuestion", targetEntity=Choice.class)
+	/*@JoinTable(name="question_choice",joinColumns={
+			@JoinColumn(name="id")
+	},inverseJoinColumns={
+			@JoinColumn(name="")
+	})*/
 	private List<Choice> listChoice;
+	
+	@ManyToOne
 	private SubjectCategory subjectcategory;
+	
+	
 	public String getQuestiontype() {
 		return questiontype;
 	}

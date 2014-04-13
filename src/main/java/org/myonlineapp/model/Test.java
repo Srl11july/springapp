@@ -2,14 +2,21 @@ package org.myonlineapp.model;
 
 import java.util.List;
 
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="Test")
 public class Test extends BaseEntity{
 	private String username;
+	
+	//@OneToMany(mappedBy="")
+	@ElementCollection(targetClass=Question.class)
 	private List<Question> listQuestion;
+	
+	
 	private int totalmarks;
 	private int marksobtained;
 	public String getUsername() {
